@@ -2,14 +2,14 @@ name: amd64-image-build
 
 on:
   push:
-    branches: [ "packer" ]
+    branches: [ "amd64-image" ]
     paths-ignore:
       - '*.md'
       - '.gitignore'
       - 'scripts/packer/build-arm64-rpi.sh'
       - 'scripts/packer/joininbox-arm64-rpi.pkr.hcl'
   pull_request:
-    branches: [ "packer" ]
+    branches: [ "amd64-image" ]
     paths-ignore:
       - '*.md'
       - '.gitignore'
@@ -33,8 +33,8 @@ jobs:
 
       - name: Run the build script
         run: |
-          cd scripts/packer
-          bash build-amd64.sh
+          cd scripts/packer/amd64
+          bash amd64.sh
 
       - name: Upload the image
         uses: actions/upload-artifact@v3

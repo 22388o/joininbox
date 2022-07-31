@@ -84,7 +84,7 @@ build {
   }
 
   provisioner "shell" {
-    script = "../../build_joininbox.sh"
+    script = "../../../build_joininbox.sh"
   }
 
   post-processor "checksum" {
