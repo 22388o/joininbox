@@ -1,4 +1,4 @@
-name: arm64-rpi-image-build
+name: test
 
 on:
   push:
