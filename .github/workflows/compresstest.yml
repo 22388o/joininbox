@@ -35,7 +35,12 @@ jobs:
           cd scripts/packer/arm64-rpi/packer-builder-arm
           echo test > joininbox-arm64-rpi.img
 
-      - name: Compute Checksum
+      - name: Compress image
+        run: |
+          cd scripts/packer/arm64-rpi/packer-builder-arm/
+          tar -czvf joininbox-arm64-rpi.img.tar.gz joininbox-arm64-rpi.img
+
+      - name: Compute checksum
         run: |
           cd scripts/packer/arm64-rpi/packer-builder-arm/
           sha256sum joininbox-arm64-rpi.img > joininbox-arm64-rpi.img.sha256
