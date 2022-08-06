@@ -50,6 +50,6 @@ jobs:
         with:
           name: joininbox-arm64-rpi-image-${{ env.BUILD_DATE }}-${{ env.BUILD_VERSION }}
           path: |
-            ${{ github.workspace }}/scripts/packer/arm64-rpi/packer-builder-arm/joininbox-arm64-rpi.img
-            ${{ github.workspace }}/scripts/packer/arm64-rpi/packer-builder-arm/joininbox-arm64-rpi.img.sha256
+            ${{ github.workspace }}/scripts/packer/arm64-rpi/packer-builder-arm/joininbox-arm64-rpi.img.tar.gz
+            ${{ github.workspace }}/scripts/packer/arm64-rpi/packer-builder-arm/joininbox-arm64-rpi.img.tar.gz.sha256
 
