@@ -32,7 +32,7 @@ jobs:
       - name: Run the build script
         run: |
           mkdir -p scripts/packer/arm64-rpi/packer-builder-arm
-          cd scripts/packer/arm64-rpi/packer-builder-arm
+          cd scripts/packer/arm64-rpi/packer-builder-arm/
           echo test > joininbox-arm64-rpi.img
 
       - name: Compress image
@@ -43,7 +43,7 @@ jobs:
       - name: Compute checksum
         run: |
           cd scripts/packer/arm64-rpi/packer-builder-arm/
-          sha256sum joininbox-arm64-rpi.img > joininbox-arm64-rpi.img.sha256
+          sha256sum joininbox-arm64-rpi.img.tar.gz > joininbox-arm64-rpi.img.tar.gz.sha256
 
       - name: Upload the image
         uses: actions/upload-artifact@v3
