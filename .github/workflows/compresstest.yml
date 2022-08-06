@@ -2,13 +2,13 @@ name: test
 
 on:
   push:
-    branches: [ "packer" ]
+    branches: [ "compress-test" ]
     paths-ignore:
       - '*.md'
       - '.gitignore'
       - 'scripts/packer/amd64'
   pull_request:
-    branches: [ "packer" ]
+    branches: [ "compress-test" ]
     paths-ignore:
       - '*.md'
       - '.gitignore'
