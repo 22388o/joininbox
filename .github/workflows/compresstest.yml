@@ -31,6 +31,7 @@ jobs:
 
       - name: Run the build script
         run: |
+          mkdir -p scripts/packer/arm64-rpi/packer-builder-arm
           cd scripts/packer/arm64-rpi/packer-builder-arm
           echo test > joininbox-arm64-rpi.img
 
