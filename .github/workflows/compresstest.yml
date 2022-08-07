@@ -44,7 +44,7 @@ jobs:
       - name: Compress image
         run: |
           cd scripts/packer/arm64-rpi/packer-builder-arm/
-          xz -v joininbox-arm64-rpi.img
+          xz -zf9ev joininbox-arm64-rpi.img
 
       - name: Compute checksum of the compressed image
         run: |
